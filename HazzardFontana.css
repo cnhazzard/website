@@ -1764,7 +1764,7 @@
   width: 493px;
   min-height: 335px;
   height: auto;
-  margin: 161px -80px 0 auto;
+  margin: 208px -20px 0 auto;
 }
 
 .u-section-6 .u-container-layout-2 {
@@ -1778,10 +1778,11 @@
 }
 
 .u-section-6 .u-group-2 {
-  width: 611px;
-  min-height: 224px;
+  width: 479px;
+  min-height: 268px;
   background-image: none;
-  margin: -496px auto 0 -20px;
+  height: auto;
+  margin: -543px auto 0 -20px;
 }
 
 .u-section-6 .u-container-layout-3 {
@@ -1895,7 +1896,6 @@
   }
 
   .u-section-6 .u-group-2 {
-    width: 520px;
     margin-left: 10px;
   }
 
