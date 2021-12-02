@@ -1,7 +1,7 @@
 #content-desktop {display: block;}
 #content-mobile {display: none;}
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
 #content-desktop {display: none;}
 #content-mobile {display: block;}
@@ -42,7 +42,6 @@ p {
     left: 0;
     text-align: center;
     z-index: -10;
-    
 }
 
 
@@ -52,4 +51,10 @@ position: absolute;
     left: 230px;
     border: 1px green solid;
     
+}
+
+
+.tamagotchi2 {
+    left: 0;
+    width: 70%;
 }
