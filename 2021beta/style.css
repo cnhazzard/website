@@ -1,0 +1,55 @@
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 500px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+
+
+.mobiletext {
+    font-size: 32px;
+    font-family: sans-serif;
+    color:black;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background-color: green;
+}
+
+p {
+    z-index: 100;
+    font-size: 48px;
+    font-family: sans-serif;
+    color:black;
+    text-shadow: 1px -1px white;
+}
+
+#main {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tamagotchi {
+    position: relative;
+    top: -1000px;
+    left: 0;
+    text-align: center;
+    z-index: -10;
+    
+}
+
+
+iframe {
+position: absolute;
+    top: 535px;
+    left: 230px;
+    border: 1px green solid;
+    
+}
