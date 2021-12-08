@@ -13,13 +13,29 @@
     font-size: 32px;
     font-family: sans-serif;
     color:black;
+    text-align: center;
 }
 
 body {
-    text-align: center;
+    background-color: green;
+}
+
+.center {
     margin: auto;
     width: 50%;
-    background-color: green;
+}
+
+
+
+.header {
+    background-color: #FF0020;
+    height: 124px;
+}
+
+
+.header img {
+    margin: auto;
+    display: block;
 }
 
 p {
@@ -28,6 +44,7 @@ p {
     font-family: sans-serif;
     color:black;
     text-shadow: 1px -1px white;
+    text-align: center;
 }
 
 #main {
@@ -38,7 +55,7 @@ p {
 
 .tamagotchi {
     position: relative;
-    top: -1000px;
+    top: -1190px;
     left: 0;
     text-align: center;
     z-index: -10;
@@ -47,7 +64,7 @@ p {
 
 iframe {
 position: absolute;
-    top: 535px;
+    top: 345px;
     left: 230px;
     border: 1px green solid;
     
@@ -56,5 +73,5 @@ position: absolute;
 
 .tamagotchi2 {
     left: 0;
-    width: 70%;
 }
+
