@@ -26,10 +26,9 @@ body {
 }
 
 
-
 .header {
     background-color: #FF0020;
-    height: 124px;
+    height: 127px;
 }
 
 
@@ -55,7 +54,7 @@ p {
 
 .tamagotchi {
     position: relative;
-    top: -1190px;
+    top: -320px;
     left: 0;
     text-align: center;
     z-index: -10;
@@ -64,12 +63,11 @@ p {
 
 iframe {
 position: absolute;
-    top: 345px;
+    top: 185px;
     left: 230px;
     border: 1px green solid;
     
 }
-
 
 .tamagotchi2 {
     left: 0;
