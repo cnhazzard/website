@@ -17,18 +17,20 @@
       background-repeat: repeat;
     }
 
+    #uzerDiv {
+      max-width: 70%;
+    }
+
     @media (max-width: 768px) {
-      body {
-        width: 100%;
-        justify-content: unset;
-        align-items: unset;
+      #uzerDiv {
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <script src="https://iframe.strimm.com/embedded-iframe.js"></script>
-  <div id="uzerDiv" style="max-width: 70%; width:100%; height: auto; display: block; margin: auto;">
+  <div id="uzerDiv" style="width:100%; height: auto; display: block; margin: auto;">
     <div id="embeddedDiv" style="position: relative; min-height: 200px; overflow: hidden; height: 500px">
       <meta name="viewport" content="width=device-width">
       <iframe id="strimm-iframe" allow="autoplay" allowfullscreen width="100%" height="100%" style="margin: 0; border: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;" src="https://iframe.strimm.com/HazzardFontana/YuleHotTub?guideMode=float&keepGuideOpened=true"></iframe>
@@ -36,3 +38,4 @@
   </div>
 </body>
 </html>
+
