@@ -18,16 +18,16 @@
     }
 
     #uzerDiv {
-      max-width: 70%;
+      max-width: 100%;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       #uzerDiv {
-        max-width: 100%;
+        max-width: 70%;
       }
     }
     table {
-      width: 70%;
+      width: 100%;
       border-collapse: collapse;
       background-color: black;
     color: white;
@@ -36,6 +36,11 @@
     td {
       border: none;
     }
+
+     @media (min-width: 768px) {
+      width: 70%;
+    }
+  }
   </style>
 </head>
 <body>
