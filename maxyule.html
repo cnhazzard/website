@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardcore Holiday Hotline</title>
+    <title>MAX YULE</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             background: green;
         }
         h1 {
-            font-size: 30px;
+            font-size: 40px;
             color: orange;
             text-shadow: 0 0 5px orange, 0 0 10px yellow, 0 0 15px red;
             animation: flicker 1s infinite;
+            margin-top: 20px;
+            text-align: center;
         }
-        p {
-            font-size: 50px;
+        .hotline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .hotline img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+        .hotline p {
+            font-size: 80px;
             color: white;
             text-align: center;
-            margin-top: 20px;
         }
         @keyframes flicker {
             0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
@@ -39,8 +51,10 @@
 </head>
 <body>
     <h1>Welcome to Hazzard & Fontana's Hardcore Holiday Hotline!</h1>
-    <p>1-833-MAX-YULE</p>
+    <div class="hotline">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTczZnNwNzJrMzR1Z2EzcjM0ZXc2OTR6YmVqNzFud2twanMwcmNobCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iL8KAC4lLDWcv4BQtm/giphy.gif" alt="decorative gif">
+        <p>1-833-MAX-YULE</p>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTczZnNwNzJrMzR1Z2EzcjM0ZXc2OTR6YmVqNzFud2twanMwcmNobCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iL8KAC4lLDWcv4BQtm/giphy.gif" alt="decorative gif">
+    </div>
 </body>
 </html>
-
-
