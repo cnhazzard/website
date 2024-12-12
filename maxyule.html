@@ -53,7 +53,9 @@
         color: white;
         padding: 20px;
         margin-top: 20px;
-        border: 2px solid white;
+        border: 10px solid transparent; /* Make the border transparent initially */
+        border-image: linear-gradient(45deg, red 25%, white 25%, white 50%, red 50%, red 75%, white 75%, white 100%); /* Create a striped gradient */
+        border-image-slice: 1; /* Make the gradient fill the border area */
         width: auto; /* Let the width adjust to the content */
         display: inline-block; /* Make it shrink to fit content */
         text-align: left; /* Keep text aligned as desired */
