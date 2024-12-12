@@ -12,17 +12,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: green;
+            background: green url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVvMWZmdjVwenQ5eXNoOTlkejE5Yzh0Yzc1bjRqb2EwZ3B0NThjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7SWSujYfCpNzvN5XD4/giphy.gif') repeat;
         }
         h1 {
-            color: white;
-            font-family: Arial, sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 30px;
+            color: orange;
+            text-shadow: 0 0 5px orange, 0 0 10px yellow, 0 0 15px red;
+            animation: flicker 1s infinite;
+        }
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0.3;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Hazzard & Fontana's Max Yule Hotline!</h1>
+    <h1>Welcome to Hazzard & Fontana's Hardcore Holiday Hotline!</h1>
 </body>
 </html>
 
