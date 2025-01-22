@@ -45,7 +45,7 @@
         text-align: center;
     }
     .phone-number {
-        font-size: 30px; /* Smaller font size for the phone number */
+        font-size: 25px; /* Smaller font size for the phone number */
         display: block; /* Ensures it starts on a new line */
     }
     .textbox {
@@ -68,46 +68,57 @@
     }
     .textbox ul li {
         margin-bottom: 10px;
+    }
+    .clickable-text {
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
-    <audio id="audioPlayer" src="audio/MaxYuleIntroMenuFINAL.wav" autoplay></audio>
     <h1>Welcome to Hazzard & Fontana's Xtreme Xmas Hotline!</h1>
     <div class="hotline">
         <img src=images/FireBomb.gif alt="decorative gif">
-        <p>1-833-MAX-YULE<br><span class="phone-number">(1-833-629-9853)</span></p>
+        <p>1-833-MAX-YULE<br><span class="phone-number">Sadly the hotline is no longer active, but you can hear all the hardcore holiday extravagance it had to offer by <span class="clickable-text" onclick="playAudio('audio/MaxYuleIntroMenuFINAL.mp3')">CLICKING HERE.</span></span></p>
         <img src=images/FireBomb.gif alt="decorative gif">
     </div>
     <div>
     <div class="textbox">
-        <p style="text-align: center;"><b>SO MANY EXTENSIONS!!!!</b></p>
-        <p>Keep calling back to experience them all!</p>
+        <p style="text-align: center;"><b>CLICK BELOW TO TRY ALL THE EXTENSIONS!!!!</b></p>
         <ul>
-            <li>1 - To be wished a low-key merry Christmas...</li>
-            <li>2 - To be wished happy Hanukkah by a non-observant jew who has been bar mitzvahed...</li>
-            <li>3 - To be wished a happy “holiday season” by someone who is taller than you...</li>
-            <li>4 - If it’s your birthday...</li>
-            <li>5 - To hear us sing SILENT NIGHT to you in perfect pitch...</li>
-            <li>6 - For a holiday greeting written by Chat GPT...</li>
-            <li>7 - If you’re a planner and would like to be wished a Happy Valentine's Day.</li>
-            <li>8 - If you want to be wished a happy christmas, the way english people do it...</li>
-            <li>9 - If you want someone to whisper merry christmas to you, in a slightly uncomfortable way...</li>
-            <li>10 - For Mike to compliment your physical appearance...</li>
-            <li>11 - For Chris to compliment your personality...</li>
-            <li>12 - For Mike to compliment your specific outfit.</li>
-            <li>13 - For a lukewarm compliment from Chris.</li>
-            <li>14 - For a compliment that’s quietly kind of an insult...</li>
-            <li>15 - For an insult that’s couched as concern...</li>
-            <li>16 - To play the “guess what number we’re thinking of” game.</li>
-            <li>17 - To hear a word of wisdom...</li>
-            <li>18 - If you want to tell us a secret...</li>
-            <li>19 - To hear a pep talk from Chris...</li>
-            <li>20 - If you just want someone to listen to your feelings...</li>
-            <li>21 - To hear great options for rap names.</li>
-            <li>22 - To hear a fun fact.</li>
-            <li>23 - To pitch us your idea for our next christmas card.</li>
-            <li>24 - A mystery extension… even we don’t know what’s there.</li>
+            <li>1 - <span class="clickable-text" onclick="playAudio('audio/Extension1.mp3')">To be wished a low-key merry Christmas...</span></li>
+            <li>2 - <span class="clickable-text" onclick="playAudio('audio/Ext2.mp3')">To be wished happy Hanukkah by a non-observant jew who has been bar mitzvahed...</span></li>
+            <li>3 - <span class="clickable-text" onclick="playAudio('audio/Ext3.mp3')">To be wished a happy “holiday season” by someone who is taller than you...</span></li>
+            <li>4 - <span class="clickable-text" onclick="playAudio('audio/Ext4.mp3')">If it’s your birthday...</span></li>
+            <li>5 - <span class="clickable-text" onclick="playAudio('audio/Ext5.mp3')">To hear us sing SILENT NIGHT to you in perfect pitch...</span></li>
+            <li>6 - <span class="clickable-text" onclick="playAudio('audio/Ext6.mp3')">For a holiday greeting written by Chat GPT...</span></li>
+            <li>7 - <span class="clickable-text" onclick="playAudio('audio/Ext7.mp3')">If you’re a planner and would like to be wished a Happy Valentine's Day.</span></li>
+            <li>8 - <span class="clickable-text" onclick="playAudio('audio/Ext8.mp3')">If you want to be wished a happy christmas, the way english people do it...</span></li>
+            <li>9 - <span class="clickable-text" onclick="playAudio('audio/Ext9.mp3')">If you want someone to whisper merry christmas to you, in a slightly uncomfortable way...</span></li>
+            <li>10 - <span class="clickable-text" onclick="playAudio('audio/Ext10.mp3')">For Mike to compliment your physical appearance...</span></li>
+            <li>11 - <span class="clickable-text" onclick="playAudio('audio/Ex11.mp3')">For Chris to compliment your personality...</span></li>
+            <li>12 - <span class="clickable-text" onclick="playAudio('audio/Ext12.mp3')">For Mike to compliment your specific outfit.</span></li>
+            <li>13 - <span class="clickable-text" onclick="playAudio('audio/Ext13.mp3')">For a lukewarm compliment from Chris.</span></li>
+            <li>14 - <span class="clickable-text" onclick="playAudio('audio/Ext14.mp3')">For a compliment that’s quietly kind of an insult...</span></li>
+            <li>15 - <span class="clickable-text" onclick="playAudio('audio/Ext15.mp3')">For an insult that’s couched as concern...</span></li>
+            <li>16 - <span class="clickable-text" onclick="playAudio('audio/Ext17.mp3')">To hear a word of wisdom...</span></li>
+            <li>17 - <span class="clickable-text" onclick="playAudio('audio/Ext18.mp3')">If you want to tell us a secret...</span></li>
+            <li>18 - <span class="clickable-text" onclick="playAudio('audio/Ext19.mp3')">To hear a pep talk from Chris...</span></li>
+            <li>19 - <span class="clickable-text" onclick="playAudio('audio/Ext20.mp3')">If you just want someone to listen to your feelings...</span></li>
+            <li>20 - <span class="clickable-text" onclick="playAudio('audio/Ext21.mp3')">To hear great options for rap names.</span></li>
+            <li>21 - <span class="clickable-text" onclick="playAudio('audio/Ext22.mp3')">To hear a fun fact.</span></li>
+            <li>22 - <span class="clickable-text" onclick="playAudio('audio/Ext23.mp3')">To pitch us your idea for our next christmas card.</span></li>
+            <li>23 - <span class="clickable-text" onclick="playAudio('audio/Ext24.mp3')">A mystery extension… even we don’t know what’s there.</span></li>
         </ul>
+        <audio id="audioPlayer"></audio>
     </div>
+<script>
+        function playAudio(audioFile) {
+            const audio = document.getElementById('audioPlayer');
+            audio.src = audioFile; // Change the audio source
+            audio.play(); // Play the new audio
+        }
+    </script>
 </body>
 </html>
