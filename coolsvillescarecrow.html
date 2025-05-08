@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coolsville Scarecrow</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coolsville Scarecrow</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 0;
+      font-size: 2.5rem;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .full-row {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Coolsville Scarecrow</h1>
-    </header>
-    <main>
-        <!-- Replace the src with the path to your image -->
-        <img src="path/to/your-image.jpg" alt="Coolsville Scarecrow">
-    </main>
+  <header>Coolsville Scarecrow</header>
+  <div class="image-grid">
+    <img src="images/Scarecrow1.png" alt="Scarecrow Image 1" />
+    <img src="images/Scarecrow2.png" alt="Scarecrow Image 2" />
+    <div class="full-row">
+      <img src="images/Scarecrow3.png" alt="Scarecrow Image 3" />
+    </div>
+  </div>
 </body>
 </html>
