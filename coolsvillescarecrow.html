@@ -13,30 +13,41 @@
       padding: 0;
       text-align: center;
     }
+
     header {
       padding: 2rem 0;
       font-size: 2.5rem;
     }
-    .top-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      align-items: center;
     }
-    .bottom-row {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
+
+    .image-grid .cell-left {
+      text-align: right;
     }
-    .image-box {
-      max-width: 45%;
+
+    .image-grid .cell-right {
+      text-align: left;
     }
-    .bottom-row img {
-      max-width: 60%;
+
+    .bottom-image {
+      margin-top: 40px;
     }
+
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 10px;
+    }
+
+    .bottom-image img {
+      max-width: 60%;
     }
   </style>
 </head>
@@ -46,10 +57,10 @@
   <!-- Top row: image 1 right, image 2 left -->
   <div class="top-row">
     <div class="image-box">
-      <img src="images/Scarecrow2.png" alt="Scarecrow Image 2 (left aligned)" />
+      <img src="images/Scarecrow1.png" alt="Scarecrow Image 1" />
     </div>
     <div class="image-box">
-      <img src="images/Scarecrow1.png" alt="Scarecrow Image 1 (right aligned)" />
+      <img src="images/Scarecrow2.png" alt="Scarecrow Image 2" />
     </div>
   </div>
 
