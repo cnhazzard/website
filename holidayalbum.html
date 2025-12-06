@@ -1,313 +1,188 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Christmas is a Holiday with Music</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Christmas is a Holiday with Music — Hazzard & Fontana</title>
+
 <style>
-  :root{
-    --bg: #0f1724;
-    --card-bg: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-    --accent: #7c3aed;
-    --muted: #9aa4b2;
-    --max-width: 960px;
-    --gutter: 20px;
-    --radius: 16px;
-    --logo-size: 48px;
+  :root {
+    --bg: #0d0f16;
+    --radius: 18px;
+    --logo-size: 54px;
+    --text-muted: #9aa4b2;
   }
 
-  * {box-sizing: border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
-                radial-gradient(1000px 500px at 90% 90%, rgba(59,130,246,0.06), transparent),
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    background: radial-gradient(circle at 20% 20%, rgba(124,58,237,0.15), transparent),
+                radial-gradient(circle at 80% 80%, rgba(59,130,246,0.08), transparent),
                 var(--bg);
-    color: #e6eef6;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:48px 20px;
+    min-height: 100vh;
+    color: #e7eef7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
   }
 
-  .wrap{
-    width:100%;
-    max-width:var(--max-width);
-    margin:0 auto;
+  .wrap {
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
   }
 
-  .card{
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: clamp(18px, 3.5vw, 28px);
-    display:flex;
-    gap: clamp(18px, 3.5vw, 28px);
-    align-items:center;
-    box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-    backdrop-filter: blur(6px) saturate(120%);
-  }
-
-  .art {
-    flex: 0 0 280px;
-    width: 280px;
-    height: 280px;
-    border-radius: 12px;
+  .artwork {
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+    margin: 0 auto;
+    border-radius: 16px;
     overflow: hidden;
-    position:relative;
-    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-    background: linear-gradient(135deg,#111827,#0b1220);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
   }
 
-  .art img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+  .artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .meta {
-    flex:1 1 auto;
-    min-width: 200px;
-    display:flex;
-    flex-direction:column;
-    gap:16px;
+  h1 {
+    margin-top: 26px;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
   }
 
-  .title-row{
-    display:flex;
-    gap:12px;
-    align-items:baseline;
-    justify-content:space-between;
+  .artist {
+    margin-top: 6px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
   }
 
-  .title {
-    font-size: clamp(20px, 2.6vw, 28px);
-    line-height:1.05;
-    font-weight:700;
-    letter-spacing:-0.02em;
+  .desc {
+    margin: 14px auto 28px;
+    max-width: 48ch;
+    color: var(--text-muted);
+    line-height: 1.45;
+    font-size: 0.95rem;
   }
 
-  .artist{
-    color:var(--muted);
-    font-weight:600;
-    font-size:14px;
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 24px;
   }
 
-  .desc{
-    color:var(--muted);
-    font-size:14px;
-    margin-top:8px;
-    max-width:52ch;
+  .logo-btn {
+    width: var(--logo-size);
+    height: var(--logo-size);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.09);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
   }
 
-  .cta-row{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    flex-wrap:wrap;
+  .logo-btn:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
   }
 
-  /* logo grid */
-  .logos{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    flex-wrap:wrap;
-    margin-top:6px;
-  }
-
-  .logo-link{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:var(--logo-size);
-    height:var(--logo-size);
-    border-radius:10px;
-    text-decoration:none;
-    background: rgba(255,255,255,0.02);
-    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
-    position:relative;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,0.03);
-  }
-
-  .logo-link:focus{
-    outline:3px solid rgba(124,58,237,0.28);
-    outline-offset:3px;
-  }
-
-  .logo-link:hover{
-    transform:translateY(-6px);
-    box-shadow: 0 12px 30px rgba(2,6,23,0.55);
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-  }
-
-  .logo-link svg{
-    width:60%;
-    height:60%;
-    display:block;
-  }
-
-  .note{
-    color:var(--muted);
-    font-size:13px;
-  }
-
-  /* Responsive */
-  @media (max-width:880px){
-    .card{flex-direction:column; align-items:center;}
-    .art{width: min(64vw, 360px); height: min(64vw, 360px)}
-    .meta{align-items:center; text-align:center}
-    .title-row{flex-direction:column; gap:6px}
+  .logo-btn svg {
+    width: 65%;
+    height: 65%;
   }
 </style>
 </head>
+
 <body>
-  <main class="wrap" role="main">
-    <article class="card" aria-labelledby="album-title">
-      <!-- Album artwork -->
-      <figure class="art" aria-hidden="false">
-        <!-- Replace the src with your album artwork -->
-        <img src="images/2025AlbumCoverArt.png" alt="Album cover for 'Christmas is a Holiday with Music' by Hazzard & Fontana" loading="lazy">
-      </figure>
+<div class="wrap">
 
-      <!-- Meta & links -->
-      <div class="meta">
-        <div class="title-row">
-          <div>
-            <h1 id="album-title" class="title">Christmas is a Holiday with Music</h1>
-            <div class="artist">Hazzard & Fontana</div>
-          </div>
+  <!-- ALBUM ARTWORK -->
+  <div class="artwork">
+    <img src="images/2025AlbumCoverArt.png"
+         alt="Album cover for Christmas is a Holiday with Music">
+  </div>
 
-          <!-- Optional: Add a "Buy / Stream" primary button -->
-          <div>
-            <a href="#listen" class="logo-link" style="width:auto;height:auto;padding:10px 14px;border-radius:999px;">
-              <strong style="font-size:14px;color:var(--accent)">Listen / Buy</strong>
-            </a>
-          </div>
-        </div>
+  <!-- TEXT BELOW ARTWORK -->
+  <h1>Christmas is a Holiday with Music</h1>
+  <div class="artist">Hazzard & Fontana</div>
+  <p class="desc">
+    The all-new holiday album from Hazzard & Fontana.
+  </p>
 
-        <p class="desc">
-          Chris & Mike's sure to be timeless Christmas album. Release date: <time datetime="2025-12-06">December 12, 2025</time>.
-        </p>
+  <!-- STREAMING LOGOS -->
+  <div class="logos">
 
-        <div>
-          <div class="note">Listen on:</div>
-          <!-- Logos / links. Replace href="#" with your platform links. Keep the aria-labels. -->
-          <div class="logos" id="listen" aria-label="Streaming platforms">
-            <!-- Spotify -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on Spotify">
-              <!-- Simple Spotify glyph (stylized) -->
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>Spotify</title>
-                <circle cx="12" cy="12" r="10" fill="#1DB954"/>
-                <path d="M6.5 9.5c3-1.8 8-2 11 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-                <path d="M6.8 12.9c2.4-1.4 6.7-1.7 9 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-                <path d="M7 15.5c2-1 5.5-1.2 7.5 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-              </svg>
-            </a>
+    <!-- Spotify -->
+    <a class="logo-btn" href="#" aria-label="Spotify" target="_blank" rel="noopener">
+      <svg viewBox="0 0 168 168" fill="none">
+        <circle cx="84" cy="84" r="84" fill="#1DB954"/>
+        <path fill="#fff" d="M121.27 108.52c-1.49 2.45-4.65 3.23-7.1 1.74-19.44-11.9-43.86-14.6-72.54-8.06-2.77.63-5.54-1.1-6.17-3.87-.63-2.77 1.1-5.54 3.87-6.17 31.62-7.1 59.08-4.02 81.66 9.41 2.45 1.49 3.23 4.65 1.74 7.1zm8.9-20.03c-1.84 2.98-5.73 3.91-8.71 2.07-22.25-13.69-56.18-17.68-82.48-9.74-3.34 1-6.87-.9-7.87-4.25-1-3.34.9-6.87 4.25-7.87 30.5-9.12 68.94-4.72 95.37 11.37 2.98 1.84 3.91 5.73 2.07 8.71zm.83-21.62C104.88 49.1 61.1 46.5 30.26 55.6c-3.91 1.12-7.98-1.1-9.1-5.01-1.12-3.91 1.1-7.98 5.01-9.1 35.21-10.12 84.41-7.19 116.7 12.7 3.47 2.13 4.55 6.66 2.42 10.13-2.13 3.47-6.66 4.55-10.13 2.42z"/>
+      </svg>
+    </a>
 
-            <!-- Apple Music -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on Apple Music">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>Apple Music</title>
-                <rect x="2" y="2" width="20" height="20" rx="4" ry="4" fill="#000000"/>
-                <path d="M12 6v10.5a3 3 0 1 0 2 0V6z" fill="#fff"/>
-              </svg>
-            </a>
+    <!-- Apple Music -->
+    <a class="logo-btn" href="#" aria-label="Apple Music" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path fill="#FA243C" d="M4 2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2z"/>
+        <path fill="#fff" d="M16.5 6l-6 1.2v7.3a1.9 1.9 0 102 1.9V10.6l4-.8v4.4a1.9 1.9 0 102 1.9V6z"/>
+      </svg>
+    </a>
 
-            <!-- YouTube Music -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on YouTube Music">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>YouTube Music</title>
-                <rect x="2" y="4" width="20" height="16" rx="3" ry="3" fill="#ff0000"/>
-                <polygon points="10,8 17,12 10,16" fill="#fff"/>
-              </svg>
-            </a>
+    <!-- YouTube Music -->
+    <a class="logo-btn" href="#" aria-label="YouTube Music" target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="22" fill="#FF0000"/>
+        <polygon points="20,16 34,24 20,32" fill="#fff"/>
+      </svg>
+    </a>
 
-            <!-- Amazon Music -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on Amazon Music">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>Amazon Music</title>
-                <rect x="2" y="4" width="20" height="16" rx="3" ry="3" fill="#00a8e1"/>
-                <path d="M7 14c3-4 8-4 10 0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-              </svg>
-            </a>
+    <!-- Amazon Music -->
+    <a class="logo-btn" href="#" aria-label="Amazon Music" target="_blank" rel="noopener">
+      <svg viewBox="0 0 100 30">
+        <rect width="100" height="30" rx="6" fill="#232F3E"/>
+        <path fill="#fff" d="M20 21c6-8 16-8 20 0" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </a>
 
-            <!-- Bandcamp -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on Bandcamp">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>Bandcamp</title>
-                <rect x="3" y="6" width="18" height="12" rx="2" ry="2" fill="#2b2b2b"/>
-                <path d="M6 12h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-                <circle cx="9.5" cy="12" r="1.1" fill="#fff"/>
-              </svg>
-            </a>
+    <!-- Bandcamp -->
+    <a class="logo-btn" href="#" aria-label="Bandcamp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path fill="#1DA0C3" d="M6 6h12l-4 12H2z"/>
+      </svg>
+    </a>
 
-            <!-- SoundCloud -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on SoundCloud">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>SoundCloud</title>
-                <rect x="2" y="7" width="18" height="10" rx="2" ry="2" fill="#ff8800"/>
-                <path d="M6 12h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </a>
+    <!-- SoundCloud -->
+    <a class="logo-btn" href="#" aria-label="SoundCloud" target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48">
+        <path fill="#FF8800" d="M34 20a8 8 0 010 16H14a6 6 0 010-12h1a9 9 0 0117-4z"/>
+      </svg>
+    </a>
 
-            <!-- Deezer -->
-            <a class="logo-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open on Deezer">
-              <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-                <title>Deezer</title>
-                <rect x="3" y="6" width="18" height="12" rx="2" ry="2" fill="#1b1b1b"/>
-                <g transform="translate(4,7)">
-                  <rect width="1.6" height="6" y="0" fill="#f44336"/>
-                  <rect width="1.6" height="6" x="2.2" fill="#ff9800"/>
-                  <rect width="1.6" height="6" x="4.4" fill="#ffeb3b"/>
-                  <rect width="1.6" height="6" x="6.6" fill="#4caf50"/>
-                  <rect width="1.6" height="6" x="8.8" fill="#2196f3"/>
-                </g>
-              </svg>
-            </a>
+    <!-- Deezer -->
+    <a class="logo-btn" href="#" aria-label="Deezer" target="_blank" rel="noopener">
+      <svg viewBox="0 0 48 48">
+        <rect width="48" height="48" rx="10" fill="#000"/>
+        <rect x="10" y="26" width="4" height="10" fill="#FF4949"/>
+        <rect x="16" y="22" width="4" height="14" fill="#FFAD00"/>
+        <rect x="22" y="18" width="4" height="18" fill="#FFE600"/>
+        <rect x="28" y="14" width="4" height="22" fill="#00D95F"/>
+        <rect x="34" y="10" width="4" height="26" fill="#0F62FE"/>
+      </svg>
+    </a>
 
-            <!-- Add more platforms as needed -->
-          </div>
-        </div>
-
-        <p class="note">Tip: Replace the <code>img src</code> and each platform's <code>href</code> with your real artwork URL and platform links.</p>
-      </div>
-    </article>
-  </main>
-
-  <!-- Optional: small script to open links in same tab if you prefer -->
-  <script>
-    // Example: dynamically fill platform links from a JS object (optional)
-    /* Uncomment and edit below to programmatically set links
-    const links = {
-      spotify: "https://open.spotify.com/album/...",
-      apple: "https://music.apple.com/album/...",
-      youtube: "https://music.youtube.com/...",
-      amazon: "https://music.amazon.com/...",
-      bandcamp: "https://artist.bandcamp.com/album/...",
-      soundcloud: "https://soundcloud.com/artist/track",
-      deezer: "https://www.deezer.com/album/..."
-    };
-
-    document.querySelectorAll('.logos .logo-link').forEach(a=>{
-      const label = a.getAttribute('aria-label') || '';
-      if(label.includes('Spotify')) a.href = links.spotify || '#';
-      if(label.includes('Apple Music')) a.href = links.apple || '#';
-      if(label.includes('YouTube Music')) a.href = links.youtube || '#';
-      if(label.includes('Amazon Music')) a.href = links.amazon || '#';
-      if(label.includes('Bandcamp')) a.href = links.bandcamp || '#';
-      if(label.includes('SoundCloud')) a.href = links.soundcloud || '#';
-      if(label.includes('Deezer')) a.href = links.deezer || '#';
-    });
-    */
-  </script>
+  </div>
+</div>
 </body>
 </html>
